@@ -6,11 +6,11 @@ import Countdown from 'Countdown';
 import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 
 //load foundation
-require('style!css!foundation-sites/dist/foundation.min.css');
+require('style-loader!css-loader!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
 //App css
-require('style!css!sass!applicationStyles');
+require('style-loader!css-loader!sass-loader!applicationStyles');
 
 ReactDOM.render(
   <Router history={hashHistory}>

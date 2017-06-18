@@ -1,9 +1,10 @@
 var webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: [
-    'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
+    'script-loader!jquery/dist/jquery.min.js',
+    'script-loader!foundation-sites/dist/foundation.min.js',
     './app/app.jsx'
   ],
   externals: {
@@ -20,15 +21,15 @@ module.exports = {
     filename: './public/bundle.js'
   },
   resolve: {
-    root: __dirname,
     alias: {
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/Navigation.jsx',
-      Timer: 'app/components/Timer.jsx',
-      Countdown: 'app/components/Countdown.jsx',
-      applicationStyles: 'app/styles/app.scss'
+      Main: __dirname+'/app/components/Main.jsx',
+      Nav: __dirname+'/app/components/Navigation.jsx',
+      Timer: __dirname+'/app/components/Timer.jsx',
+      Countdown: __dirname+'/app/components/Countdown.jsx',
+      Clock: __dirname+'/app/components/Clock.jsx',
+      applicationStyles: __dirname+'/app/styles/app.scss'
     },
-    extensions: ['','.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   module: {
     loaders: [
