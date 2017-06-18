@@ -1,0 +1,18 @@
+.top-bar {
+    background-color: $nav-background;
+
+    ul {
+        @extend .top-bar;
+    }
+
+    .menu {
+        .menu-text {
+            color: $nav-text-color;
+
+            a {
+                display: inline;
+                padding: 0;
+            }
+        }
+    }
+}
