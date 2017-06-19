@@ -1,13 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 let Clock = React.createClass({
     getDefaultProps: function(){
         return {
             totalSeconds: 0
         };
-    },
-    propTypes: {
-        totalSeconds: React.PropTypes.number
     },
     formatSeconds: function(totalSeconds){
         let seconds = totalSeconds % 60;
@@ -31,5 +29,9 @@ let Clock = React.createClass({
         );
     }
 });
+
+Clock.propTypes = {
+    totalSeconds: PropTypes.number
+};
 
 module.exports = Clock;
