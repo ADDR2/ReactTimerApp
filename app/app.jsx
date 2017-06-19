@@ -6,7 +6,7 @@ import Countdown from 'Countdown';
 import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 
 //load foundation
-require('style-loader!css-loader!foundation-sites/dist/foundation.min.css');
+//require('style-loader!css-loader!foundation-sites/dist/foundation.min.css');
 $(document).foundation();
 
 //App css
